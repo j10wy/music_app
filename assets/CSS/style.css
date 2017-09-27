@@ -1,0 +1,58 @@
+body{
+	margin: 0;
+	background-color: #CF8889;
+}
+#logo{
+	width: 100px;
+	padding-left: 60px;
+}
+nav{
+	background-color: rgba(0,0,0,0.73);
+	padding: 30px;
+}
+#hache1{
+	max-width: 900px;
+	margin: 0 auto;
+}
+h1{
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 70px;
+	font-weight: lighter;
+	color: #F4F4F4;
+	text-shadow: 3px 3px 3px rgba(0,0,0,0.73);
+}
+table{
+	margin: 0 auto;
+}
+#buttonSearch{
+	margin: 0 auto;
+}
+#artistField, #songField{
+	border: none;
+	padding: 22px 60px;
+	border-radius: 30px;
+	text-transform: uppercase;
+	box-shadow: 3px 3px 10px rgba(0,0,0,0.73);
+	text-align: center;
+	font-size: 15px;
+}
+#artistField{
+	margin-right: 90px;
+}
+#searchButton{
+	border: none;
+	border-radius: 20px;
+	padding: 10px 20px 10px 20px;
+	background-color: #F86646;
+	margin-top: 80px;
+	box-shadow: 3px 3px 10px rgba(0,0,0,0.73);
+}
+footer{
+	background-color: rgba(0,0,0,0.73);
+	padding-top: 100px;
+	position: sticky;
+	margin-top: 100px;
+}
