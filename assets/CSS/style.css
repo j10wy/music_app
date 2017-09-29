@@ -59,3 +59,18 @@ table{
 	background-color: rgba(0,0,0,0.73);
 	padding-top: 100px;
 }
+.container{
+	margin: 50px 200px;
+}
+#track-list-container{
+	display: block;
+	margin: o auto;
+	color: #ffffff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	text-shadow: 3px 3px 3px #000000;
+}
+#track-list-container{
+	float: left;
+	width: 60%;
+}
