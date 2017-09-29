@@ -1,33 +1,32 @@
 body{
 	margin: 0;
-	background-color: #CF8889;
+	background-image: url(../images/background-picture.jpg);
+	background-size: cover;	
 }
 #logo{
-	width: 100px;
-	padding-left: 60px;
+	width: 250px;
+	padding-left: 160px;
 }
 nav{
 	background-color: rgba(0,0,0,0.73);
-	padding: 30px;
+	padding: 20px 0px 10px 0px;
 }
 #hache1{
 	max-width: 900px;
 	margin: 0 auto;
+	margin-top: 50px
 }
-h1{
+#hache1 h1{
 	text-transform: uppercase;
-	letter-spacing: 5px;
+	letter-spacing: 3px;
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
-	font-size: 70px;
+	font-size: 60px;
 	font-weight: lighter;
 	color: #F4F4F4;
 	text-shadow: 3px 3px 3px rgba(0,0,0,0.73);
 }
 table{
-	margin: 0 auto;
-}
-#buttonSearch{
 	margin: 0 auto;
 }
 #artistField, #songField{
@@ -38,6 +37,7 @@ table{
 	box-shadow: 3px 3px 10px rgba(0,0,0,0.73);
 	text-align: center;
 	font-size: 15px;
+	margin-top: 100px;
 }
 #artistField{
 	margin-right: 90px;
@@ -45,15 +45,32 @@ table{
 #searchButton{
 	border: none;
 	border-radius: 20px;
-	padding: 10px 20px 10px 20px;
+	padding: 10px 40px 10px 40px;
 	background-color: #F86646;
 	margin-top: 80px;
 	box-shadow: 3px 3px 10px rgba(0,0,0,0.73);
+	text-transform: uppercase;
+	color: #FFFFFF;
+	margin-bottom: 300px;
+	letter-spacing: 1px;
+	font-family: 'Roboto', sans-serif;
 }
-footer{
+.navbar-fixed-bottom{
 	background-color: rgba(0,0,0,0.73);
 	padding-top: 100px;
-	position: sticky;
-	margin-top: 100px;
 }
->>>>>>> c3071c8a76b54301ec08827843710ff9eff0bf37
+.container{
+	margin: 50px 200px;
+}
+#track-list-container{
+	display: block;
+	margin: o auto;
+	color: #ffffff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	text-shadow: 3px 3px 3px #000000;
+}
+#track-list-container{
+	float: left;
+	width: 60%;
+}
