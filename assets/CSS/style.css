@@ -59,11 +59,22 @@ table{
 	background-color: rgba(0,0,0,0.73);
 	padding-top: 100px;
 }
-.container{
-	margin: 50px 200px;
+.wrap{
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 100px 0px;
+}
+#album-cover{
+	float: right;
 }
 #track-list-container{
-	display: block;
+	margin: o auto;
+	color: #ffffff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	text-shadow: 3px 3px 3px #000000;
+}
+#lirycs{
 	margin: o auto;
 	color: #ffffff;
 	font-family: 'Roboto', sans-serif;
@@ -71,6 +82,9 @@ table{
 	text-shadow: 3px 3px 3px #000000;
 }
 #track-list-container{
-	float: left;
 	width: 60%;
+}
+#album-details{
+	background-color: rgba(0,0,0,0.73);;
+	color: #FFFFFF;
 }
