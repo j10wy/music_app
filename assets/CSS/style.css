@@ -1,9 +1,7 @@
 body{
 	margin: 0;
 	background-image: url(../images/background-picture.jpg);
-	background-size: cover;
-	
-	
+	background-size: cover;	
 }
 #logo{
 	width: 250px;
