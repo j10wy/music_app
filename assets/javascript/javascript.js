@@ -22,6 +22,7 @@ $("#searchButton").on("click", function(event) {
 			contentType: 'application/json',
 		}).done(function (response) {
 			lyrics = response.message.body.lyrics.lyrics_body;
+			console.log(response);
 			console.log(lyrics);
 			console.log(typeof lyrics);
 			$("#lyrics").html(lyrics);
