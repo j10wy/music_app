@@ -1,8 +1,11 @@
 const functions = require('firebase-functions');
 var request = require('request'); // "Request" library
 var client_id = 'f8148b6599904798a6df461ee469c1e8'; // Your client id
-var client_secret = 'cfb191024d79450a9733fe0bed8fd993'; // Your secret
-
+var client_secret = 'cfb191024d79450a9733fe0bed8fd993';
+ // Your secret
+const cors = require('cors')({
+	origin: true
+});
 /*
  *
  * For more information, read
@@ -23,12 +26,16 @@ var authOptions = {
 	json: true
 };
 
-exports.helloWorld = functions.https.onRequest((req, res) => {
+exports.spotify = functions.https.onRequest((req, res) => {
+
 	request.post(authOptions, function (error, response, body) {
 		if (!error && response.statusCode === 200) {
 			// use the access token to access the Spotify Web API
 			var token = body.access_token;
+			res.set('Access-Control-Allow-Origin', '*')
+				.set('Access-Control-Allow-Methods', 'GET, POST')
 			res.send(token);
 		}
 	});
+
 });
