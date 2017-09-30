@@ -1,15 +1,25 @@
-var song = "Billie Jean";
-var artist = "Michael Jackson";
-var songsReturned;
-var songID;
-var matchedSongs = [];
 
-$.ajax({
+
+$("#searchButton").on("click", function(event){
+
+	var song = $("#songField").val();
+	var artist = $("#artistField").val();
+	var songsReturned;
+	var songID;
+	var matchedSongs = [];
+
+	console.log("SONG ON CLICK",song);
+	console.log("ARTIST ON CLICK",artist);
+
+
+	$.ajax({
 		url: "https://us-central1-ucb-musicon.cloudfunctions.net/spotify"
 	})
 	.done(function (token) {
 		var spotifyApi = new SpotifyWebApi();
 		spotifyApi.setAccessToken(token);
+		console.log("SONG ON CLICK",song);
+	
 
 		spotifyApi.searchTracks(song)
 			.then(function (data) {
@@ -19,14 +29,18 @@ $.ajax({
 
 				songsReturned.forEach(function(songReturned) {
 					artistName = songReturned.artists[0].name;
-					songID = songReturned.artists[0].id;
+					songNAME = songReturned.name;
+					songID = songReturned.id;
+					album = songReturned.album.name;
+					
+				
 
-					// console.log("ARTIST",artistName);	
-					// console.log("ID",songID);	
+					// console.log("SONG 2",song);
+					// console.log("ARTIST 2",artist);
 					
 
-					if(artistName === artist) {
-						matchedSongs.push({name:artistName, songid:songID});
+					if(artistName.toLowerCase() === artist.toLowerCase() && songNAME.toLowerCase() === song.toLowerCase()) {
+						matchedSongs.push({name:artistName, song_name: songNAME ,songid:songID, album:album});
 					}
 
 				});
@@ -37,8 +51,8 @@ $.ajax({
 				console.error(err);
 			});
 
-
-
-
-
 	});
+
+});
+
+
