@@ -2,6 +2,7 @@
 $("#searchButton").on("click", function(event) {
 	var artist = $("#artistField").val();
 	var song = $("#songField").val();
+	var lyrics = ""
 	console.log(artist);
 	console.log(song);
 
@@ -20,9 +21,14 @@ $("#searchButton").on("click", function(event) {
 			jsonpCallback: 'callback',
 			contentType: 'application/json',
 		}).done(function (response) {
-			console.log(response.message.body.lyrics.lyrics_body);
+			lyrics = response.message.body.lyrics.lyrics_body;
+			console.log(lyrics);
+			console.log(typeof lyrics);
+			$("#lyrics").html(lyrics);
 		});
-		window.location='playing-track.html';
+	$("#first-page").css("display","none")
+	$("#second-page").css("display","block")
+	
 });
 
 
