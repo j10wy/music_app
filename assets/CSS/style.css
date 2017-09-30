@@ -66,7 +66,11 @@ table{
 }
 #album-cover{
 	float: right;
-	position: relative;
+	
+}
+#cover{
+	height: 200px;
+	width: 200px;
 }
 #track-list-container{
 	margin: o auto;
@@ -76,7 +80,7 @@ table{
 	text-shadow: 3px 3px 3px #000000;
 	float: left;
 }
-#lirycs{
+#lyrics{
 	margin: o auto;
 	color: #ffffff;
 	font-family: 'Roboto', sans-serif;
@@ -89,7 +93,15 @@ table{
 #album-details{
 	background-color: rgba(0,0,0,0.73);;
 	color: #FFFFFF;
+	width: 90%;
+	margin-top: -25px;
+	margin-left: 3px;
+	height: 200px;
 }
 #second-page{
 	display: none;
+}
+#album-details{
+	padding-top: 20px;
+	padding-left: 10px
 }
