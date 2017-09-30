@@ -59,18 +59,68 @@ table{
 	background-color: rgba(0,0,0,0.73);
 	padding-top: 100px;
 }
-
-.container{
-	margin: 50px 200px;
+.wrap{
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 100px 0px;
+}
+#album-cover{
+	float: right;
+	
+}
+#cover{
+	height: 200px;
+	width: 200px;
+	position: relative;
+	z-index: 50;
 }
 #track-list-container{
-	display: block;
 	margin: o auto;
 	color: #ffffff;
 	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
 	text-shadow: 3px 3px 3px #000000;
-  float: left;
+	float: left;
+}
+#lyrics{
+	margin: o auto;
+	color: #ffffff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	text-shadow: 3px 3px 3px #000000;
+}
+#track-list-container{
 	width: 60%;
 }
-
+#album-details{
+	background-color: rgba(0,0,0,0.73);;
+	color: #FFFFFF;
+	width: 90%;
+	margin-top: -25px;
+	margin-left: 3px;
+	height: 200px;
+}
+#second-page{
+	display: none;
+}
+#album-details{
+	padding-top: 20px;
+	padding-left: 10px;
+	position: relative;
+}
+#back-to-lyric{
+	border: none;
+	border-radius: 20px;
+	background-color: #F86646;
+	box-shadow: 3px 3px 10px rgba(0,0,0,0.73);
+	text-transform: uppercase;
+	color: #FFFFFF;
+	letter-spacing: 1px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 10px;
+	padding: 10px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.73);
+	position: absolute;
+	right: 40px;
+	bottom: 30px;
+}
