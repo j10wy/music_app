@@ -63,7 +63,6 @@ table{
 }
 .navbar-fixed-bottom{
 	background-color: rgba(0,0,0,1);
-	padding-top: 70px;
 }
 .wrap{
 	max-width: 800px;
@@ -75,8 +74,8 @@ table{
 	
 }
 #cover{
-	height: 100%;
-	width: 100%;
+	height: 80%;
+	width: 80%;
 	position: relative;
 	z-index: 50;
 }
@@ -98,7 +97,7 @@ table{
 #album-details{
 	background-color: rgba(0,0,0,0.73);;
 	color: #FFFFFF;
-	width: 90%;
+	width: 72%;
 	margin-top: -25px;
 	margin-left: 5px;
 	height: 200px;
@@ -154,14 +153,14 @@ table{
 	height: 3px;
 	background: #F86646;
 	position: relative;
-	width: 700px;
+	width: 60%;
 	bottom: 20px;
 	left: 170px;
 }
 #player-seekbar:after{
 	position: absolute;
 	content: "";
-	width: 400px;
+	width: 30%;
 	display: inline-block;
 	height: 3px;
 	background: #FFFFFF;
@@ -175,20 +174,20 @@ table{
 	border: 4px solid #F86646;
 	background: #FFFFFF;
 	border-radius: 100%;
-	margin-left: 400px;
+	margin-left: 30%;
 	margin-top: -6px;
 }
 #player-buttons{
 	margin: 0 auto;
 	width: 70%;
 	position: relative;
-	bottom: 40px;
+	bottom: -20px;
 }
 #pause-button, #stop-button{
 	float: right;
 	position: relative;
 	bottom: 40px;
-	right: 160px;
+	right: px;
 }
 #rewind-button, #play-button, #stop-button{
 	margin-right: 10px;
