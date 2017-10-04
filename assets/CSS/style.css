@@ -7,6 +7,12 @@ body{
 	width: 250px;
 	padding-left: 160px;
 }
+
+#albumImg{
+	width: 300px;
+	height: 300px;
+}
+
 nav{
 	background-color: rgba(0,0,0,0.73);
 	padding: 20px 0px 10px 0px;
@@ -83,6 +89,8 @@ table{
 #album-details{
 	background-color: rgba(0,0,0,0.73);;
 	color: #FFFFFF;
+	font-size: 20px;
+	text-align: center;
 }
 #second-page{
 	display: none;

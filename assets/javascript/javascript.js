@@ -22,10 +22,10 @@ $("#searchButton").on("click", function(event) {
 			contentType: 'application/json',
 		}).done(function (response) {
 			lyrics = response.message.body.lyrics.lyrics_body;
-			console.log(response);
-			console.log(lyrics);
-			console.log(typeof lyrics);
-			$("#lyrics").html(lyrics);
+			lyricsSplit = lyrics.split("...")
+			lyricsClean = lyricsSplit[0];
+			console.log(lyricsClean);
+			$("#lyrics").html(lyricsClean);
 		});
 	$("#first-page").css("display","none")
 	$("#second-page").css("display","block")
