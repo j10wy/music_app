@@ -1,5 +1,3 @@
-
-
 $("#searchButton").on("click", function(event){
 
 	var song = $("#songField").val();
@@ -8,9 +6,6 @@ $("#searchButton").on("click", function(event){
 	var songID;
 	var matchedSongs = [];
 
-	console.log("SONG ON CLICK",song);
-	console.log("ARTIST ON CLICK",artist);
-
 
 	$.ajax({
 		url: "https://us-central1-ucb-musicon.cloudfunctions.net/spotify"
@@ -18,42 +13,31 @@ $("#searchButton").on("click", function(event){
 	.done(function (token) {
 		var spotifyApi = new SpotifyWebApi();
 		spotifyApi.setAccessToken(token);
-		console.log("SONG ON CLICK",song);
-	
-
+		
 		spotifyApi.searchTracks(song)
 			.then(function (data) {
 				
 				songsReturned = data.tracks.items;
-				console.log(data);
 				console.log('songsReturned', songsReturned);
 
 				songsReturned.forEach(function(songReturned) {
-					artistName = songReturned.artists[0].name;
-					songNAME = songReturned.name;
-					songID = songReturned.id;
-					album = songReturned.album.name;
-					albumImage = songReturned.album.images[0].url;
+					var artistName = songReturned.artists[0].name,
+					songNAME = songReturned.name,
+					songID = songReturned.id,
+					album = songReturned.album.name,
+					preview = songReturned.preview_url;
 
-					
-				
-
-					// console.log("SONG 2",song);
-					// console.log("ARTIST 2",artist);
-					
 					if(artistName.toLowerCase() === artist.toLowerCase() && songNAME.toLowerCase() === song.toLowerCase()) {
-						matchedSongs.push({name:artistName, song_name: songNAME ,songid:songID, album:album, albumImage:albumImage});
+						matchedSongs.push({name:artistName, song_name: songNAME ,songid:songID, album:album, preview:preview});
 					}
 
 				});
 
-				console.log(matchedSongs);
-				imgDisplayed = matchedSongs[0].albumImage;
-				albumNameDisplayed = matchedSongs[0].album;
-
-				$("#albumImg").attr("src",imgDisplayed);
-				$("#album-name").html(albumNameDisplayed);
-
+				
+				var selectedSong = matchedSongs[0];
+				console.log($("#player"));
+				$("#player").attr("src",selectedSong.preview);
+				console.log("Song URL", selectedSong.preview);
 
 			}, function (err) {
 				console.error(err);
@@ -62,5 +46,3 @@ $("#searchButton").on("click", function(event){
 	});
 
 });
-
-
