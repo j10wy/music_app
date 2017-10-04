@@ -25,6 +25,7 @@ $("#searchButton").on("click", function(event){
 			.then(function (data) {
 				
 				songsReturned = data.tracks.items;
+				console.log(data);
 				console.log('songsReturned', songsReturned);
 
 				songsReturned.forEach(function(songReturned) {
@@ -32,20 +33,27 @@ $("#searchButton").on("click", function(event){
 					songNAME = songReturned.name;
 					songID = songReturned.id;
 					album = songReturned.album.name;
+					albumImage = songReturned.album.images[0].url;
+
 					
 				
 
 					// console.log("SONG 2",song);
 					// console.log("ARTIST 2",artist);
 					
-
 					if(artistName.toLowerCase() === artist.toLowerCase() && songNAME.toLowerCase() === song.toLowerCase()) {
-						matchedSongs.push({name:artistName, song_name: songNAME ,songid:songID, album:album});
+						matchedSongs.push({name:artistName, song_name: songNAME ,songid:songID, album:album, albumImage:albumImage});
 					}
 
 				});
 
 				console.log(matchedSongs);
+				imgDisplayed = matchedSongs[0].albumImage;
+				albumNameDisplayed = matchedSongs[0].album;
+
+				$("#albumImg").attr("src",imgDisplayed);
+				$("#album-name").html(albumNameDisplayed);
+
 
 			}, function (err) {
 				console.error(err);
