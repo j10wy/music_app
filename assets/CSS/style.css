@@ -7,6 +7,12 @@ body{
 	width: 250px;
 	padding-left: 160px;
 }
+
+#albumImg{
+	width: 300px;
+	height: 300px;
+}
+
 nav{
 	background-color: rgba(0,0,0,0.73);
 	padding: 20px 0px 10px 0px;
@@ -68,20 +74,14 @@ table{
 	float: right;
 	position: relative;
 }
-#track-list-container{
-	margin: o auto;
-	color: #ffffff;
-	font-family: 'Roboto', sans-serif;
-	font-size: 20px;
-	text-shadow: 3px 3px 3px #000000;
-	float: left;
-}
+
 #lyrics{
 	margin: o auto;
 	color: #ffffff;
 	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
 	text-shadow: 3px 3px 3px #000000;
+	text-align: center;
 }
 #track-list-container{
 	width: 60%;
@@ -89,6 +89,8 @@ table{
 #album-details{
 	background-color: rgba(0,0,0,0.73);;
 	color: #FFFFFF;
+	font-size: 20px;
+	text-align: center;
 }
 #second-page{
 	display: none;
