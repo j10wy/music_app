@@ -1,28 +1,33 @@
-body{
+body {
 	margin: 0;
 	background-image: url(../images/background-picture.jpg);
-	background-size: cover;	
+	background-size: cover;
 }
-#logo{
+
+#logo {
 	width: 250px;
 	padding-left: 160px;
+	cursor: pointer;
 }
 
-#albumImg{
+#albumImg {
 	width: 300px;
 	height: 300px;
+	margin: 0px 0px 30px 60px;
 }
 
-nav{
-	background-color: rgba(0,0,0,0.73);
+nav {
+	background-color: rgba(0, 0, 0, 0.73);
 	padding: 20px 0px 10px 0px;
 }
-#hache1{
+
+#hache1 {
 	max-width: 900px;
 	margin: 0 auto;
 	margin-top: 50px
 }
-#hache1 h1{
+
+#hache1 h1 {
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	font-family: 'Roboto', sans-serif;
@@ -30,68 +35,119 @@ nav{
 	font-size: 60px;
 	font-weight: lighter;
 	color: #F4F4F4;
-	text-shadow: 3px 3px 3px rgba(0,0,0,0.73);
+	text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.73);
+	text-decoration: none;
 }
-table{
+
+table {
 	margin: 0 auto;
 }
-#artistField, #songField{
+
+#artistField,
+#songField {
 	border: none;
 	padding: 22px 60px;
 	border-radius: 30px;
 	text-transform: uppercase;
-	box-shadow: 3px 3px 10px rgba(0,0,0,0.73);
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.73);
 	text-align: center;
 	font-size: 15px;
 	margin-top: 100px;
 }
-#artistField{
+
+#artistField {
 	margin-right: 90px;
 }
-#searchButton{
+
+#searchButton {
 	border: none;
 	border-radius: 20px;
 	padding: 10px 40px 10px 40px;
 	background-color: #F86646;
 	margin-top: 80px;
-	box-shadow: 3px 3px 10px rgba(0,0,0,0.73);
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.73);
 	text-transform: uppercase;
 	color: #FFFFFF;
 	margin-bottom: 300px;
 	letter-spacing: 1px;
 	font-family: 'Roboto', sans-serif;
 }
-.navbar-fixed-bottom{
-	background-color: rgba(0,0,0,0.73);
+
+.navbar-fixed-bottom {
+	background-color: rgba(0, 0, 0, 0.73);
 	padding-top: 100px;
 }
-.wrap{
+
+.wrap {
 	max-width: 800px;
 	margin: 0 auto;
 	padding: 100px 0px;
 }
-#album-cover{
+
+#album-cover {
 	float: right;
 	position: relative;
 }
 
-#lyrics{
-	margin: o auto;
+h2#song-title {
+	color:white;
+	text-align: left;
+	text-decoration: underline;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-shadow: 3px 3px 3px #000000;
+	text-decoration: none;
+	text-decoration: none;
+}
+
+#lyrics {
+	margin: 0 auto;
 	color: #ffffff;
 	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
 	text-shadow: 3px 3px 3px #000000;
-	text-align: center;
+	text-align: left;
+	max-width: 400px;
+	float: left;
+	margin-bottom: 200px;
 }
-#track-list-container{
+
+#track-list-container {
 	width: 60%;
 }
-#album-details{
-	background-color: rgba(0,0,0,0.73);;
+
+#album-details {
+	background-color: rgba(0, 0, 0, 0.73);
 	color: #FFFFFF;
 	font-size: 20px;
 	text-align: center;
+	width: 300px;
+	position: absolute;
+	left: 59px;
 }
-#second-page{
+
+#second-page {
 	display: none;
+}
+
+div.player {
+	display: none;
+}
+
+footer>div.controls {
+	display: none;
+	margin-top: -68px;
+	text-align: center;
+	font-size: 32px;
+}
+
+i.fa {
+	color: white;
+	margin: 0 5px;
+	transition: color .3s;
+	cursor: pointer;
+}
+
+i.fa:hover {
+	color: #1db954;
 }
