@@ -13,6 +13,7 @@ body {
 #albumImg {
 	width: 300px;
 	height: 300px;
+	margin: 0px 0px 30px 60px;
 }
 
 nav {
@@ -35,6 +36,7 @@ nav {
 	font-weight: lighter;
 	color: #F4F4F4;
 	text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.73);
+	text-decoration: none;
 }
 
 table {
@@ -91,6 +93,11 @@ h2#song-title {
 	color:white;
 	text-align: left;
 	text-decoration: underline;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-shadow: 3px 3px 3px #000000;
+	text-decoration: none;
+	text-decoration: none;
 }
 
 #lyrics {
@@ -100,6 +107,9 @@ h2#song-title {
 	font-size: 20px;
 	text-shadow: 3px 3px 3px #000000;
 	text-align: left;
+	max-width: 400px;
+	float: left;
+	margin-bottom: 200px;
 }
 
 #track-list-container {
@@ -108,10 +118,12 @@ h2#song-title {
 
 #album-details {
 	background-color: rgba(0, 0, 0, 0.73);
-	;
 	color: #FFFFFF;
 	font-size: 20px;
 	text-align: center;
+	width: 300px;
+	position: absolute;
+	left: 59px;
 }
 
 #second-page {
