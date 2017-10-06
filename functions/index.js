@@ -1,8 +1,12 @@
+// Require firebase functions
 const functions = require('firebase-functions');
-var request = require('request'); // "Request" library
-var client_id = 'f8148b6599904798a6df461ee469c1e8'; // Your client id
-var client_secret = 'cfb191024d79450a9733fe0bed8fd993';
- // Your secret
+// Require the 'request' package from node_modules
+var request = require('request'); 
+ // Spotify client id
+var client_id = 'f8148b6599904798a6df461ee469c1e8';
+ // Spotify secret id
+var client_secret = 'cfb191024d79450a9733fe0bed8fd993'; //
+ // Require the cors package from node modules.
 const cors = require('cors')({
 	origin: true
 });
@@ -14,7 +18,7 @@ const cors = require('cors')({
  * 
  */
 
-// your application requests authorization
+// The authorization object that we pass to the request.post method
 var authOptions = {
 	url: 'https://accounts.spotify.com/api/token',
 	headers: {
